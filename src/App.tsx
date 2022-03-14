@@ -1,6 +1,6 @@
 // Dependencies
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 // Components
 import { CreateUsersComponents } from "./components/CreateUsersComponents";
@@ -29,7 +29,6 @@ function App() {
   });
 
   return (
-    <Router>
       <sessionProviderContext.Provider
         value={[isThereSession, setIsThereSession]}
       >
@@ -67,7 +66,6 @@ function App() {
           </Routes>
         </AlertProviderContext.Provider>
       </sessionProviderContext.Provider>
-    </Router>
   );
 }
 
