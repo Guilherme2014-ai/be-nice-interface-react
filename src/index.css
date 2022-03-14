@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-style: none;
+    list-style: none;
+    text-decoration-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-image: linear-gradient(to right, #005ce5, #345ee5, #4a60e4, #5b63e4, #6965e3);
+}
+  

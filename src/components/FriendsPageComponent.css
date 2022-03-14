@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+main {
+    margin: 40px;
+}
+
+#no_content {
+    font-family: 'Lato', sans-serif;
+}
+
+.table-area {
+    width: 100%;
+    box-shadow: 0px 3px 10px black;
+}
+
+.tableRow {
+    transition: all ease 0.5s;
+}
+
+.tableRow:hover {
+    cursor: pointer;
+    background-color: rgb(199, 199, 199);
+}
+
+.friends-area {
+    box-shadow: black 0px 0px 9px;
+    background-color: rgb(198, 197, 255);
+}
+
+.content {
+    margin-top: 200px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    margin-top: 82px;
+    width: 100%;
+}
+
+.button_group {
+    width: 100%;
+    background: linear-gradient(to right, #b6b3fb, #a39ff6, #908cf0, #7d78ea, #6965e3);
+}
+
+.button_group button {
+    width: 100%;
+    font-size: 2pc;
+    color: black;
+}

@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.animation_area {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.contents_animation_area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.sad_walking {
+    width: 100px;
+}
+
+.orange_guy_swinging_animation {
+    width: 200px;
+}
+
+#content {
+    margin: 100px;
+    color: rgb(204, 216, 255);
+}
+
+
+.image_friends_area {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+}
+
+.image_friend {
+    width: 100px;
+    height: 100px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+    transform: scale(0.9);
+    transition: all ease 0.3s;
+}
+
+.image_friend:hover {
+    cursor: pointer;
+    transform: scale(1);
+    border-radius: 10%;
+}
+
+#friends_title {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 5px;
+}
+
+.text_and_friends {
+    margin-top: 70px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: space-evenly;
+}
+
+.compliment {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.compliment p {
+    font-size: large;
+    margin-left: 5px;
+}
+
+/*Estruturar melhor a página*/
