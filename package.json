@@ -5,7 +5,7 @@
   "main": "./build/index.html",
   "scripts": {
     "start": "webpack serve --open",
-    "build": "webpack"
+    "build": "node --trace-deprecation node_modules/webpack/bin/webpack.js"
   },
   "author": "Guilherme",
   "license": "ISC",
