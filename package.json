@@ -5,7 +5,7 @@
   "main": "./build/index.html",
   "scripts": {
     "start": "webpack serve --open",
-    "build": "webpack --env.NODE_ENV=production"
+    "build": "webpack"
   },
   "author": "Guilherme",
   "license": "ISC",
