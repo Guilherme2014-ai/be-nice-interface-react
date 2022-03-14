@@ -9,7 +9,6 @@ module.exports = {
   output: {
     path: resolve(__dirname, "build"),
     filename: "bundle.js",
-    publicPath: "/",
   },
   performance : {
     hints : false
