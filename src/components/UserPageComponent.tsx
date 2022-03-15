@@ -2,7 +2,7 @@
 import React, { Dispatch, useEffect, useRef, useState } from "react";
 import Lottie from "lottie-web";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { idUniqueV2 } from "id-unique-protocol";
 import { config, requests } from "../requests/benice_api";
 
@@ -48,6 +48,8 @@ const UserPageComponent: React.FC<IProps> = ({
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [updatePage, setUpdatePage] = updatePageParam;
   const [textField, setTextField] = useState("");
+
+  const navigate = useNavigate();
   const { baseUrl } = config;
   // const delay = userOwner ? 2000 : 200;
 
@@ -133,7 +135,7 @@ const UserPageComponent: React.FC<IProps> = ({
       };
 
       if (!getEmailSession()) {
-        window.location.href = "/users/create";
+        navigate("/users/create");
         return;
       }
 
@@ -142,7 +144,7 @@ const UserPageComponent: React.FC<IProps> = ({
       if (email) {
         const isTheSame = email == getEmailSession();
         if (isTheSame) {
-          window.location.href = "/users/me";
+          navigate("/users/me");
         }
       }
 

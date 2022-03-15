@@ -1,7 +1,10 @@
 import React from "react";
+import  { useNavigate } from 'react-router-dom'
 
 const LostedComponent: React.FC = () => {
-  window.location.href = "/users/me";
+  const navegate = useNavigate();
+  navegate("/users/create");
+
   return <h1>Perdido ?</h1>;
 };
 

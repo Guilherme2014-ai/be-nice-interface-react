@@ -1,6 +1,6 @@
 // Dependencies
 import React, { useEffect, useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter as Router} from "react-router-dom";
 
 // Components
 import { CreateUsersComponents } from "./components/CreateUsersComponents";
@@ -33,37 +33,39 @@ function App() {
         value={[isThereSession, setIsThereSession]}
       >
         <AlertProviderContext.Provider value={[alertMessage, setAlertMessage]}>
-          <NavMainComponent
-            linkList={[{ title: "Friends", url: "/users/friends" }]}
-            updatePageParam={[updatePage, setUpdatePage]}
-          />
-          <Routes>
-            <Route path="/users/create" element={<CreateUsersComponents />} />
-            <Route path="/users/friends" element={<FriendsPageComponent />} />
-            <Route
-              path="/users/email/verification/:email/:secret"
-              element={<EmailConfirmationComponent />}
+          <Router>
+            <NavMainComponent
+              linkList={[{ title: "Friends", url: "/users/friends" }]}
+              updatePageParam={[updatePage, setUpdatePage]}
             />
-            <Route path="/" element={<LostedComponent />} />
-            <Route
-              path="/users/me"
-              element={
-                <UserPageComponent
-                  userOwner={true}
-                  updatePageParam={[updatePage, setUpdatePage]}
-                />
-              }
-            />
-            <Route
-              path="/users/:user_email"
-              element={
-                <UserPageComponent
-                  userOwner={false}
-                  updatePageParam={[updatePage, setUpdatePage]}
-                />
-              }
-            />
-          </Routes>
+            <Routes>
+              <Route path="/users/create" element={<CreateUsersComponents />} />
+              <Route path="/users/friends" element={<FriendsPageComponent />} />
+              <Route
+                path="/users/email/verification/:email/:secret"
+                element={<EmailConfirmationComponent />}
+              />
+              <Route path="/" element={<LostedComponent />} />
+              <Route
+                path="/users/me"
+                element={
+                  <UserPageComponent
+                    userOwner={true}
+                    updatePageParam={[updatePage, setUpdatePage]}
+                  />
+                }
+              />
+              <Route
+                path="/users/:user_email"
+                element={
+                  <UserPageComponent
+                    userOwner={false}
+                    updatePageParam={[updatePage, setUpdatePage]}
+                  />
+                }
+              />
+            </Routes>
+          </Router>
         </AlertProviderContext.Provider>
       </sessionProviderContext.Provider>
   );
