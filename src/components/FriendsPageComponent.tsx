@@ -1,3 +1,7 @@
+import React, { Dispatch, useState } from "react";
+import axios from "axios";
+import { idUniqueV2 } from "id-unique-protocol";
+import { useNavigate } from "react-router-dom";
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Button, ButtonGroup } from "@mui/material";
 import {
@@ -9,13 +13,7 @@ import {
   TableContainer,
   Paper,
 } from "@mui/material";
-
-import { DataGrid, GridColumns } from "@mui/x-data-grid";
-import axios from "axios";
-import { idUniqueV2 } from "id-unique-protocol";
-
-import React, { Dispatch, useState } from "react";
-import { Link } from "react-router-dom";
+import { GridColumns } from "@mui/x-data-grid";
 import { config, requests } from "../requests/benice_api";
 
 import "./FriendsPageComponent.css";
@@ -43,6 +41,7 @@ const FriendsPageComponent: React.FC = () => {
     IFriendPageData,
     Dispatch<IFriendPageData>,
   ] = useState(null);
+  const navigate = useNavigate();
 
   async function friendsListAction(listType: dataPageTypes) {
     try {
@@ -75,7 +74,7 @@ const FriendsPageComponent: React.FC = () => {
   }
 
   function columnRedirectHandler(link: string): void {
-    window.location.href = link;
+    navigate(link);
   }
 
   const buttonsFunc = {
@@ -129,7 +128,7 @@ const FriendsPageComponent: React.FC = () => {
                       <TableRow
                         className="tableRow"
                         key={idUniqueV2()}
-                        onClick={() => columnRedirectHandler(`/users/${email}`)}
+                        onClick={() => columnRedirectHandler(`/#/users/${email}`)}
                         sx={{
                           "&:last-child td, &:last-child th": { border: 0 },
                         }}
