@@ -2,7 +2,7 @@
 import React, { Dispatch, useEffect, useRef, useState } from "react";
 import Lottie from "lottie-web";
 import axios from "axios";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import { idUniqueV2 } from "id-unique-protocol";
 import { config, requests } from "../requests/benice_api";
 
@@ -251,8 +251,8 @@ const UserPageComponent: React.FC<IProps> = ({
                 <div className="image_friends_area">
                   {userDataParseToJson.friends.map((friend) => {
                     return (
-                      <a href={`/users/${friend.email}`} key={idUniqueV2()}>
-                        <div
+                      <Link to={`/#/users/${friend.email}`} key={idUniqueV2()}>
+                      <div
                           className="image_friend"
                           style={{
                             backgroundImage: ImageUrlGenerator(
@@ -260,7 +260,7 @@ const UserPageComponent: React.FC<IProps> = ({
                             ),
                           }}
                         ></div>
-                      </a>
+                      </Link>
                     );
                   })}
                 </div>
