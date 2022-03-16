@@ -239,12 +239,13 @@ const UserPageComponent: React.FC<IProps> = ({
                 <h2 id="friends_title">Amigos</h2>
                 <div className="image_friends_area">
                   {userDataParseToJson.friends.map((friend) => {
+                    const imageLink = friend.profile_picture_link ? friend.profile_picture_link : defaultImageUser;
                     return (
                       <Link to={`/#/users/${friend.email}`} key={idUniqueV2()}>
                       <div
                           className="image_friend"
                           style={{
-                            backgroundImage: "fodase",
+                            backgroundImage: ImageUrlGenerator(imageLink),
                           }}
                         ></div>
                       </Link>
@@ -269,15 +270,16 @@ const UserPageComponent: React.FC<IProps> = ({
                   {userDataParseToJson.compliments_receiveds.map(
                     (compliment) => {
                       const { message, user_image_link } = compliment;
+                      const imageLink = user_image_link ? user_image_link.profile_picture_link : defaultImageUser;
 
-                      console.log(compliment);
+                      console.log(user_image_link);
 
                       return (
                         <div className="compliment" key={idUniqueV2()}>
                           <Avatar
                             className="compliment_avatar"
                             alt="Avatar"
-                            src="fodase"
+                            src={imageLink}
                           />
                           <p>
                             <strong>{message}</strong>
