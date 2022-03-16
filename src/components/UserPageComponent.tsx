@@ -241,7 +241,7 @@ const UserPageComponent: React.FC<IProps> = ({
                   {userDataParseToJson.friends.map((friend) => {
                     const imageLink = friend.profile_picture_link ? friend.profile_picture_link : defaultImageUser;
                     return (
-                      <Link to={`/#/users/${friend.email}`} key={idUniqueV2()}>
+                      <Link to={`/users/${friend.email}`} key={idUniqueV2()}>
                       <div
                           className="image_friend"
                           style={{
