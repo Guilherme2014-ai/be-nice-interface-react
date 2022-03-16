@@ -128,7 +128,7 @@ const FriendsPageComponent: React.FC = () => {
                       <TableRow
                         className="tableRow"
                         key={idUniqueV2()}
-                        onClick={() => columnRedirectHandler(`/#/users/${email}`)}
+                        onClick={() => columnRedirectHandler(`/users/${email}`)}
                         sx={{
                           "&:last-child td, &:last-child th": { border: 0 },
                         }}
