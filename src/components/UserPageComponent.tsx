@@ -6,6 +6,10 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import { idUniqueV2 } from "id-unique-protocol";
 import { config, requests } from "../requests/benice_api";
 
+// Others
+import imagesApp from "../public/imagesApp";
+const defaultImageUser = imagesApp.defaultImageUser;
+
 // Components
 import { Avatar, TextField } from "@mui/material";
 import EditIcon from "@mui/icons-material/Edit";
@@ -17,21 +21,6 @@ interface IProps {
   userOwner: boolean;
   updatePageParam: TUpdatePage;
 }
-/*interface IFriends {
-  id: number;
-  name: string;
-  email: string;
-  profile_picture_link: string;
-}*/
-/*interface IUserData {
-  id: number;
-  name: string;
-  email: string;
-  profile_picture_link: string;
-  user_text: string;
-  compliments_receiveds: any[];
-  friends: IFriends[];
-}*/
 type TUpdatePage = [updatePage: string, setUpdatePage: Dispatch<string>];
 
 // CSS
@@ -255,9 +244,7 @@ const UserPageComponent: React.FC<IProps> = ({
                       <div
                           className="image_friend"
                           style={{
-                            backgroundImage: ImageUrlGenerator(
-                              friend.profile_picture_link,
-                            ),
+                            backgroundImage: "fodase",
                           }}
                         ></div>
                       </Link>
@@ -290,7 +277,7 @@ const UserPageComponent: React.FC<IProps> = ({
                           <Avatar
                             className="compliment_avatar"
                             alt="Avatar"
-                            src={user_image_link.profile_picture_link}
+                            src="fodase"
                           />
                           <p>
                             <strong>{message}</strong>
