@@ -25,6 +25,7 @@ function App() {
       const token = sessionStorage.getItem("token");
       token ? setIsThereSession(true) : setIsThereSession(false);
     }
+    
     sessionVerification();
   });
 
