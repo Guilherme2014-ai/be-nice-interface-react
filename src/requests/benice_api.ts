@@ -1,8 +1,10 @@
-const env = "development";
+const env = "production";
 const envs = {
-  production: {},
-  development: {
+  production: {
     baseUrl: "http://54.205.114.164:3006",
+  },
+  development: {
+    baseUrl: "http://192.168.0.28:3006",
   },
 };
 

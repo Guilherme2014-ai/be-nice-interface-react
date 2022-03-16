@@ -24,7 +24,7 @@ const NavMainComponent: React.FC<Props> = ({ linkList, updatePageParam }) => {
 
   useEffect(() => {
     async function getUserProfilePictureLink(): Promise<void> {
-      const { email } = JSON.parse(sessionStorage.getItem("user"));
+      const email = sessionStorage.getItem("user") ? JSON.parse(sessionStorage.getItem("user")).email : null;
 
       if (email) {
         const { baseUrl } = config;
@@ -53,7 +53,7 @@ const NavMainComponent: React.FC<Props> = ({ linkList, updatePageParam }) => {
   }
 
   function writeAvatar() {
-    const profile_picture = sessionStorage.getItem("profile_picture");
+    const profile_picture = sessionStorage.getItem("profile_picture") ? sessionStorage.getItem("profile_picture") : "https://thumbs.dreamstime.com/z/no-user-profile-picture-24185395.jpg";
 
     return (
       <Link to="/users/me" id="avatar_link">
