@@ -27,3 +27,8 @@ Tela de Vizualização de Usuário
 <img src="https://cdn.discordapp.com/attachments/857701858655076402/953856291279884338/unknown.png" width="600">
 <br />
 <img src="https://cdn.discordapp.com/attachments/857701858655076402/953857834234306611/Screenshot_16_LI.jpg" width="300" height="450">
+
+### Tela de Amigos e Solicitações
+Tela de Network
+<br />
+<img src="https://cdn.discordapp.com/attachments/857701858655076402/953954479022161940/unknown.png" width="600">
