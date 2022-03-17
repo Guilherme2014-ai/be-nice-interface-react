@@ -30,4 +30,4 @@ Tela de Vizualização de Usuário
 ### Tela de Amigos e Solicitações
 Tela de Network
 <br />
-<img src="https://cdn.discordapp.com/attachments/857701858655076402/953954479022161940/unknown.png" width="600">
+<img src="https://cdn.discordapp.com/attachments/857701858655076402/954008328126730300/alterar_LI.jpg" width="600">
